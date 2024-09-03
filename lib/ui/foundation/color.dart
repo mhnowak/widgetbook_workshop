@@ -21,9 +21,9 @@ class DesignSystemColor extends ColorSwatch<int> {
   static const DesignSystemColor brand = DesignSystemColor._(
     0xFF36CBE2,
     <int, Color>{
-      100: Color(0xFF36CBDD),
-      200: Color(0xFF341211),
-      300: Color(0xFFFF4411),
+      100: Color(0xFF36CBE2),
+      200: Color(0xFF2DAEC2),
+      300: Color(0xFF299FB2),
       400: Color(0xFF2491A2),
       500: Color(0xFF1C7684),
       600: Color(0xFF15616D),
