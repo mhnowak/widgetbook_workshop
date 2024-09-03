@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../ui.dart';
 
+enum Style {
+  one,
+  two,
+}
+
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
     super.key,
@@ -9,12 +14,14 @@ class PrimaryButton extends StatelessWidget {
     this.leading,
     this.trailing,
     this.onPressed,
+     this.style = Style.one,
   });
 
   final String content;
   final Widget? leading;
   final Widget? trailing;
   final VoidCallback? onPressed;
+  final Style style;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +33,9 @@ class PrimaryButton extends StatelessWidget {
           horizontal: AppTheme.of(context).spacing.l,
         ),
         decoration: BoxDecoration(
-          color: AppTheme.of(context).background.brand,
+          color: style.index == 0
+              ? AppTheme.of(context).background.brand
+              : AppTheme.of(context).background.primaryInactive,
           borderRadius: BorderRadius.circular(
             AppTheme.of(context).radius.full,
           ),
